@@ -1,0 +1,12 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "npm start"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[variables]
+# Railway automatically provides DATABASE_URL when you connect a PostgreSQL database
+NODE_ENV = "production"
+LOG_LEVEL = "info"
